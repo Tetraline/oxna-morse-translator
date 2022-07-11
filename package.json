@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "dictionary.js",
-  "type": "module",
   "scripts": {
     "test": "jest"
   },
@@ -16,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Tetraline/oxna-morse-translator/issues"
   },
-  "homepage": "https://github.com/Tetraline/oxna-morse-translator#readme"
+  "homepage": "https://github.com/Tetraline/oxna-morse-translator#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "babel-jest": "^28.1.2",
+    "jest": "^28.1.2"
+  }
 }
