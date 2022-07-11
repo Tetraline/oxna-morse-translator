@@ -1,6 +1,6 @@
 import dictionary from "./dictionary.js";
 
-const UTFChar = (string) => {
+export const UTFChar = (string) => {
   const pattern = /[a-z]|[0-9]| /;
   if (pattern.test(string[0])) {
     let output = [];
@@ -12,12 +12,12 @@ const UTFChar = (string) => {
   }
 };
 
-const someUTFChar = (string) => {
+export const someUTFChar = (string) => {
   let output = ["", string];
   let parseChar = UTFChar(output[1]);
   while (parseChar[0]) {
     output[0] += parseChar[0];
-    if (output[0] != " ") {
+    if (parseChar[0] != " ") {
       output[0] += " "; // There should be spaces after each letter that is not a space itself
     }
     output[1] = parseChar[1];
@@ -27,4 +27,10 @@ const someUTFChar = (string) => {
   return output;
 };
 
-console.log(someUTFChar("a a"));
+export const translate = (string) => {
+  let output = someUTFChar(string);
+  if (output[1]) {
+    console.error(`Unable to parse ${output[1]}`);
+  }
+  return output[0];
+};
