@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.translator {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 40vh;
+  margin: 10vw;
+  padding: 10vw;
+  transition: 1s;
+  border: 2px solid #9bcfb6;
+}
+.translator .translator__heading {
+  color: #9bcfb6;
+  font-size: 5vw;
+  font-weight: bold;
+}
+.translator .translator__output {
+  color: #9bcfb6;
+  font-size: 6vw;
+  font-weight: bolder;
+  font-family: serif;
+  max-width: 60vw;
+  word-wrap: normal;
+}
+.translator .translator__input {
+  height: 20px;
+  width: 50vw;
+  border-color: #9bcfb6;
+  -o-border-image: none;
+     border-image: none;
+  border-style: solid;
+}
+@media only screen and (min-width: 768px) {
+  .translator {
+    margin: 76.8px;
+    padding: 76.8px;
+  }
+  .translator .translator__heading {
+    font-size: 2.4rem;
+  }
+  .translator .translator__input {
+    height: 154px;
+    font-size: 2.4rem;
+    width: 384px;
+  }
+  .translator .translator__output {
+    font-size: 2.4rem;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
