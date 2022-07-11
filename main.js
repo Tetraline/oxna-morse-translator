@@ -3,7 +3,6 @@ import { UTFChar, someUTFChar, translate } from "./translate.js";
 const handleInput = (event) => {
   const pattern = /^[A-Za-z 0-9]*$/;
   if (!pattern.test(inputBox.value)) {
-    console.log("invalid input");
     event.path[1].style.backgroundColor = "#FF6961";
   } else {
     event.path[1].style.backgroundColor = "";
